@@ -12,26 +12,33 @@
       <canvas id="myCanvas" width="900px" height="500px"></canvas>
         <script>
 
-          var c = document.getElementById("myCanvas");
-          var ctx = c.getContext("2d");
+          var canvas = document.getElementById("myCanvas");
+          var ctx = canvas.getContext("2d");
 
+          // draw circle random vars
+          var x = Math.floor(Math.random()*900+1);
+          var y = 0;
+          // Math.floor(Math.random()*500+1);
+          var r = Math.floor(Math.random()*50+1);
+
+
+          // draw a circle function
           var circle = function() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
-            ctx.arc(175, 75, 50, 0, 2 * Math.PI)
+            ctx.arc(x, y, r, 0, 2 * Math.PI)
             ctx.fillStyle = 'rgba(255,255,255,0.5)';
             ctx.fill();
             ctx.lineWidth = 0;
-            context.strokeStyle = 'white';
+            context.strokeStyle = 'rgba(255,255,255,0.5)';
             ctx.stroke();
           }
 
-          circle()
+          //call circle function
+          circle();
 
-          // do cool things with the context
-          var x = Math.floor(Math.random()*900+1);
-          var y = Math.floor(Math.random()*500+1);
-          var r = Math.floor(Math.random()*500+1);
+
+
         </script>
 
 
