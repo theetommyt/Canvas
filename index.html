@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="styles/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <canvas id="myCanvas" width="900px" height="500px"></canvas>
+        <script>
+
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+
+          var circle = function() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(175, 75, 50, 0, 2 * Math.PI)
+            ctx.fillStyle = 'rgba(255,255,255,0.5)';
+            ctx.fill();
+            ctx.lineWidth = 0;
+            context.strokeStyle = 'white';
+            ctx.stroke();
+          }
+
+          circle()
+
+          // do cool things with the context
+          var x = Math.floor(Math.random()*900+1);
+          var y = Math.floor(Math.random()*500+1);
+          var r = Math.floor(Math.random()*500+1);
+        </script>
+
+
+
+
+
+
+    </div>
+  </body>
+
+</html>

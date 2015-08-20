@@ -1,0 +1,12 @@
+#wrapper {
+  width: 100%;
+  height: 100%;
+  background: slateblue;
+}
+
+#myCanvas {
+  background-image: url('http://i.imgur.com/ijZB0ry.jpg');
+  background-size: cover;
+  margin: 2% 5% 2% 5%;
+  box-shadow: inset 500px 900px 1px 1px rgba(0, 0, 0, 0.7);;
+}
